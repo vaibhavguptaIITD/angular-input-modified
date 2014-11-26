@@ -309,7 +309,8 @@
                 return (value1.getTime() === value2.getTime());
             } else {
                 // Comparing two generic objects using strong comparison.
-                return (value1 === value2);
+                // Adding underscore js function for deep comparison
+                return _.isEqual(value1, value2);
             }
         }
 
